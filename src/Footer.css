@@ -1,0 +1,122 @@
+.footer {
+    background-color: #e20981;
+    border-top:8px solid #ffef00;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    
+    font-size: 25px; 
+    
+    display: block;
+    margin-bottom:-100px;
+    height: 230px;
+    margin-top:0px;
+   }
+   .link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    margin: 20px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    font-size: 22px;
+    font-family: 'Neucha', cursive;
+   }
+   a{
+    color:#bae3f8;
+    text-shadow: 0.5px 0.5px #ffc7ff;
+    text-decoration: none;
+   }
+   a:hover{
+    color:#91daff;
+   }
+   .rights{
+       margin-top:20px;
+       background: #b50968;
+       bottom: 0;
+       height: 200px;
+       display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content:center;
+     border-top: 2px dotted #ffef00;
+   }
+   .insta{
+       margin:30px;
+       margin-left:40px;
+       margin-bottom: 30px;
+       border-radius: 50%;
+       border: 3px solid #bae3f8;
+       padding-bottom: 5px;
+       padding-left: 10px;
+       padding-right: 10px;
+       padding-top: 4px;
+   }
+
+   .all{
+       font-size: 15px;
+       font-family: 'Georama', sans-serif;
+       color: #7ed1fc;
+        text-shadow: 0.5px 0.5px #ffc7ff;
+        margin-left:10px;
+        margin-top: 10px;
+   }
+
+   .home{
+       margin-right:20px;
+   }
+   .games{
+       margin-left: 20px;
+   }
+
+   #dropdown-basic-button{
+       background:#e20981;
+       border: none;
+       color:#7ed1fc;
+      text-shadow: 0.5px 0.5px #ffc7ff;
+      font-size: 22px;
+      font-family: 'Neucha', cursive;
+      cursor:pointer;
+   }
+
+   .btn-check:active+.btn-primary:focus, .btn-check:checked+.btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: none !important;
+}
+
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+    box-shadow:none !important;}
+
+   .dropdown-menu{
+    background-color:transparent !important;
+    border:none !important;
+   }
+   button:focus:not(:focus-visible) {
+    outline: none !important; 
+}
+
+ul{
+    /* list-style-type: none; */
+    
+    margin-left:70px;
+    background:violet;
+    
+    left:700px;
+    width: 170px;   
+}
+
+li{
+    font-weight: 500;
+}
+
+.dropdown-menu {
+    font-size: 20px;
+
+}
+
+.dropdown-item{
+    color:rgb(7, 40, 88) !important;
+}
+.dropdown-item:hover{
+    color:rgb(7, 40, 88) !important;
+}

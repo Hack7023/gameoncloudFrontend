@@ -1,0 +1,14 @@
+.CardMemory {
+    text-align: center;
+    background:#0d1437;
+    background-repeat: repeat;
+  }
+  
+  body {
+    
+    min-height: 100vh;
+  }
+  
+  .point{
+    margin-bottom:100px !important;
+  }

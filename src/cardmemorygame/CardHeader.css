@@ -1,0 +1,42 @@
+h1 {
+    padding: 15px;
+    color: rgb(235, 0, 129);
+    text-shadow: 1px 1px 2px #7ed6cfe5;
+    /* position:sticky;
+    top:0; */
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+  }
+
+  .sub-header {
+    padding: 5px;
+    color: #7ed6cfe5;
+    font-size: 20px;
+    font-weight: 1000;
+    font-family: 'Neucha', cursive;
+    justify-content: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top:-20px !important;
+    margin-bottom:-20px !important;
+  }
+
+  Button {
+    color: rgb(84, 206, 223);
+    background-color: rgb(88, 0, 182);
+    margin-bottom: 5px;
+    border:1.5px solid #7ed6cfe5;
+    padding:5px;
+    font-weight: 700;
+  }
+
+  Button:hover {
+    text-shadow: 0.5px 0.5px rgb(233, 94, 203);
+    box-shadow: 2px 2px 5px #7ed6cfe5;
+    background-color: rgb(53, 40, 82);
+    font-weight: 800;
+    cursor:pointer;
+  }
+  .bold {
+    text-transform: uppercase;
+  }

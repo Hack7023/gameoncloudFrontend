@@ -1,0 +1,244 @@
+.App{
+  background-color: #0d1437;
+  background-size: 100% 100%;
+  margin-top:-350px;
+}
+
+.body{
+  margin-top:350px;
+  font-family: 'Neucha', cursive;
+}
+
+.moon {
+  width:300px;
+  margin-top:-50px;
+  margin-left:0;
+  padding:0;
+  filter: drop-shadow(3px 3px 8px #c3d3df);
+  position: fixed; 
+}
+.stars{
+  margin: none;
+  padding: none;
+  pointer-events: none;
+ position: fixed; 
+  width:10%;
+  filter: drop-shadow(2px 2px 6px #c3d3df);
+}
+.move{
+  /* width:400px; */
+  align-items: center;
+  margin-left: 35%;
+  margin-top: -20px; 
+  position: absolute;
+  display:flex;
+  flex-direction: column;
+  flex-flow: wrap;
+}
+ @media screen and (max-width: 1200px) {
+  .move{
+  width: 40%;
+  margin-left: 400px;
+  }
+  }
+  @media screen and (max-width:900px){
+    .move{
+    width: 40%;
+    margin-left: 290px;
+    }
+  }
+  @media screen and (max-width:600px){
+  .move{
+  width: 40%;
+  margin-left: 180px;
+  }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .move {
+    animation: MoveUpDown infinite 1s linear;
+  }
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    top: 220px;
+  }
+  50% {
+    top: 225px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .moon {
+    animation: moon-spin infinite 20s linear;
+  }
+}
+
+
+.App-header {
+   display: flex;
+  flex-direction: column;
+  align-items: left;
+  font-size: 27px;
+  color: #7ed1fc;
+  text-shadow: 0.5px 0.5px #ffc7ff;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left:200px;
+  margin-right: 200px;
+  padding-top:50%;
+}
+ 
+a{
+  color:#7ed1fc !important;
+  text-decoration: none !important;
+}
+a:hover{
+  color:#bae3f8 !important;
+ }
+
+
+@keyframes moon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.Game {
+   color: white;
+   display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  overflow-x: hidden;
+  margin-bottom: 100px;
+}
+
+
+
+.gamecontainer {
+  margin: auto;
+  width: 400px;
+  margin-bottom:-20px;
+}
+.rocket{
+  width: 300px;
+}
+
+.sudoku{
+  width: 300px;
+}
+
+
+
+p{
+  padding-left:0px;
+  font-size:20px;
+}
+#mem{
+  margin-left:150px;
+
+}
+
+#sud{
+  margin-left:80px;
+  margin-top:40px;
+} 
+
+#tic{
+  margin-left:150px;
+}
+
+#dod{
+  margin-left: 75px;
+  margin-top:30px;
+}
+
+
+  @media (prefers-reduced-motion: no-preference) {
+    .stars {
+      animation: twinkle 1s infinite;
+      }
+    }
+
+.star1 {
+  min-height: 100px;
+  left: 10px;
+  width:10%;
+  }
+
+.star2 {
+  margin-top:15%;
+  left: 120px;
+   width:10%;
+   }
+
+.star3 {
+   margin-top: 5%; 
+   margin-left: 55%;
+   width:10%;
+   }
+
+.star4 {
+   margin-top: 28%; 
+   margin-left: 940px;
+   }
+
+.star5 {
+   margin-top: 70%; 
+   margin-left: 20%;
+   }
+
+.star6 {
+   margin-top: 0%; 
+   margin-left: 90%;
+   }
+
+.star7 {
+   margin-top: 30%; 
+   margin-left: 0%;
+   }
+
+.star8 {
+   margin-top: 35%; 
+   margin-left: 35%;
+   }
+
+.star9 {
+   margin-top: 25%; 
+   margin-left: 45%;
+   } 
+
+@keyframes twinkle {
+   20% {
+      transform: scale(0.5);
+      opacity: 0.5;
+      }
+   }
+
+   .left{
+     position:relative;
+     }
+   .right{
+     position:relative;
+     margin-left:950px;
+   }
+  
+   #memo:hover{
+     text-shadow: 1px 1px 6px #c3d3df !important;
+   }
+   #tict:hover{
+    text-shadow: 1px 1px 6px #c3d3df;
+  }
+  #dodg:hover{
+    text-shadow: 1px 1px 6px #c3d3df;
+  }
+  #sudo:hover{
+    text-shadow: 1px 1px 6px #c3d3df;
+  }
