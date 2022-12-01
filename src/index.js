@@ -8,6 +8,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CardMemory from "./cardmemorygame/CardMemory.js";
 import RockPaper from "./rock-paper/RockPaper.js";
 import Game from "./tictactoe-react/components/Game.js";
+import Sudoku from "./Sudoku/Sudoku.js";
+
 import Shapes from "./shapes/Shapes.js";
 import Login from "./login/Login";
 import Signup from "./login/Signup";
@@ -16,6 +18,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
+      <Route path="/sudoku" element={<Sudoku />} />
 
       <Route path="/signup" element={<Signup />} />
 

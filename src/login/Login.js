@@ -27,6 +27,7 @@ const Login = () => {
         );
         sessionStorage.setItem("flappy", response.data[0].flappy);
         sessionStorage.setItem("userName", response.data[0].userName);
+        sessionStorage.setItem("suduku", response.data[0].suduku);
 
         // localStorage.setItem("userDate", response.data[0].userName);
 
@@ -38,7 +39,7 @@ const Login = () => {
   };
 
   return (
-    <div className="cover">
+    <div className="cover" style={{ marginLeft: "30%", marginTop: "50px" }}>
       <h1>Login</h1>
       <input
         onChange={(e) => {
@@ -57,6 +58,10 @@ const Login = () => {
 
       <button onClick={loginSelected} className="login-btn">
         Login
+      </button>
+      <h4>Or</h4>
+      <button onClick={() => navigate("/signup")} className="login-btn">
+        Signup
       </button>
     </div>
   );

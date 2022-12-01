@@ -8,13 +8,24 @@ import Footer from "./Footer.js";
 import memorycloud from "./memorygamecloud.png";
 import shapesgamecloud from "./shapesgamecloud.png";
 import rockpaperscissorscloud from "./rockpaperscissorscloud.png";
+import sudokusolver from "./sudokucloud.png";
+
 import tictactoecloud from "./tictactoecloud.png";
 import { Link, useNavigate } from "react-router-dom";
+import Axios from "axios";
 
 function App() {
   const navigate = useNavigate();
   const [offsetY, setOffsetY] = useState(0); //No of pixels moved from top
   const handleScroll = () => setOffsetY(window.scrollY);
+  const [usercount, setUsercount] = useState(100);
+
+  useEffect(() => {
+    Axios.post("http://localhost:3003/api/counttotaluser").then(
+      (e) => setUsercount(e.data[0]["count(*)"])
+      // console.log()
+    );
+  }, []);
 
   useEffect(() => {
     // fires whenever page is scrolled and provide y axis
@@ -32,6 +43,12 @@ function App() {
       <div style={{ alignItems: "flex-end", textAlign: "right" }}>
         {signin === "true" ? (
           <button
+            style={{
+              padding: "10px",
+              marginTop: "15px",
+              marginRight: "35px",
+              fontSize: "25px",
+            }}
             onClick={() => (
               sessionStorage.setItem("signedIn", "false"),
               sessionStorage.clear(),
@@ -41,7 +58,17 @@ function App() {
             LogOut
           </button>
         ) : (
-          <button onClick={() => navigate("/login")}>LogIn</button>
+          <button
+            style={{
+              padding: "10px",
+              marginTop: "15px",
+              marginRight: "35px",
+              fontSize: "25px",
+            }}
+            onClick={() => navigate("/login")}
+          >
+            LogIn
+          </button>
         )}
       </div>
 
@@ -70,7 +97,7 @@ function App() {
             <div>
               {" "}
               You can play games like Tic-Tac-Toe, Rock-Paper-Scissors , Memory
-              game . We'll keep adding new games.
+              game,Sudoku. We'll keep adding new games.
             </div>
           </div>
 
@@ -135,6 +162,24 @@ function App() {
                 </Link>
               </div>
             </span>
+            <span
+              className="left"
+              style={{ transform: `translateX(${offsetY * 0.2}px)` }}
+            >
+              <div id="sudo">
+                <Link to="/sudoku">
+                  <img
+                    src={sudokusolver}
+                    className="sudoku gamecontainer"
+                    alt="sudoku"
+                  />
+                  <p id="sud">SUDOKU GAME</p>
+                </Link>
+              </div>
+            </span>
+          </div>
+          <div style={{}}>
+            <h1>User Count : {usercount}</h1>
           </div>
         </div>
         <Footer />

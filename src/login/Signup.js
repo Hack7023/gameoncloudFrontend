@@ -25,7 +25,7 @@ const Signupform = () => {
   };
 
   return (
-    <div className="cover">
+    <div className="cover" style={{ marginLeft: "30%", marginTop: "50px" }}>
       <h1>Signup</h1>
       <input
         onChange={(e) => {
