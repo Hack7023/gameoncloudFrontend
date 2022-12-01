@@ -65,11 +65,14 @@ const RockPaper = () => {
     if (score > sessionStorage.getItem("rockPaperScissor")) {
       sessionStorage.setItem("rockPaperScissor", score);
 
-      Axios.post("http://localhost:3003/api/updategamerockpaperscissor", {
-        username: sessionStorage.getItem("userName"),
-        // game: "rockPaperScissor",
-        score: score,
-      }).then((e) => console.log(e));
+      Axios.post(
+        "http://gamesserver.fkc9b4c8fze2dre0.centralindia.azurecontainer.io/api/updategamerockpaperscissor",
+        {
+          username: sessionStorage.getItem("userName"),
+          // game: "rockPaperScissor",
+          score: score,
+        }
+      ).then((e) => console.log(e));
     }
   }, [score, userChoice, sessionStorage.getItem("rockPaperScissor")]);
 

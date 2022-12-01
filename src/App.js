@@ -21,7 +21,9 @@ function App() {
   const [usercount, setUsercount] = useState(100);
 
   useEffect(() => {
-    Axios.post("http://localhost:3003/api/counttotaluser").then(
+    Axios.post(
+      "http://gamesserver.fkc9b4c8fze2dre0.centralindia.azurecontainer.io/api/counttotaluser"
+    ).then(
       (e) => setUsercount(e.data[0]["count(*)"])
       // console.log()
     );

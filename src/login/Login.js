@@ -11,10 +11,14 @@ const Login = () => {
   const [details, setDetails] = useState();
 
   const loginSelected = () => {
-    Axios.post("http://localhost:3003/api/login", {
-      username: username,
-      password: password,
-    }).then((response) => {
+    Axios.post(
+      "http://gamesserver.fkc9b4c8fze2dre0.centralindia.azurecontainer.io/api/login",
+
+      {
+        username: username,
+        password: password,
+      }
+    ).then((response) => {
       try {
         setDetails(response.data[0].userName);
         navigate("/");
@@ -42,6 +46,7 @@ const Login = () => {
     <div className="cover" style={{ marginLeft: "30%", marginTop: "50px" }}>
       <h1>Login</h1>
       <input
+        required
         onChange={(e) => {
           setUsername(e.target.value);
         }}
@@ -49,6 +54,7 @@ const Login = () => {
         placeholder="username"
       />
       <input
+        required
         onChange={(e) => {
           setPassword(e.target.value);
         }}

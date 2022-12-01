@@ -60,10 +60,13 @@ function Sudoku() {
       let score = sessionStorage.getItem("suduku");
       sessionStorage.setItem("suduku", parseInt(score) + 1);
       if (sessionStorage.getItem("userName")) {
-        Axios.post("http://localhost:3003/api/updatesuduku", {
-          username: sessionStorage.getItem("userName"),
-          score: parseInt(score) + 1,
-        }).then(() => {});
+        Axios.post(
+          "http://gamesserver.fkc9b4c8fze2dre0.centralindia.azurecontainer.io/api/updatesuduku",
+          {
+            username: sessionStorage.getItem("userName"),
+            score: parseInt(score) + 1,
+          }
+        ).then(() => {});
       }
     } else if (compare.isSolvable) {
       alert("Keep going!");

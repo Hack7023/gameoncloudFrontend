@@ -12,16 +12,23 @@ const Signupform = () => {
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const submithandler = () => {
-    Axios.post("http://localhost:3003/api/insertuser", {
-      email: email,
-      password: password,
-      name: name,
-      username: username,
-    }).then((e) =>
-      e.data === "ER_DUP_ENTRY"
-        ? alert("username already selected")
-        : (alert("registration successfull "), navigate("/login"))
-    );
+    if (email === "" || name === "" || username === "" || password === "") {
+      alert("fill all required field");
+    } else {
+      Axios.post(
+        "http://gamesserver.fkc9b4c8fze2dre0.centralindia.azurecontainer.io/api/insertuser",
+        {
+          email: email,
+          password: password,
+          name: name,
+          username: username,
+        }
+      ).then((e) =>
+        e.data === "ER_DUP_ENTRY"
+          ? alert("username already selected")
+          : (alert("registration successfull "), navigate("/login"))
+      );
+    }
   };
 
   return (
