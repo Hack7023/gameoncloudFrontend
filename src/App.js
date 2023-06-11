@@ -22,7 +22,7 @@ function App() {
 
   useEffect(() => {
     Axios.post(
-      "http://gamesserver.fkc9b4c8fze2dre0.centralindia.azurecontainer.io/api/counttotaluser"
+      "https://gamesoncloudserver.azurewebsites.net/api/counttotaluser"
     ).then(
       (e) => setUsercount(e.data[0]["count(*)"])
       // console.log()

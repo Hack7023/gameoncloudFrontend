@@ -66,7 +66,7 @@ const RockPaper = () => {
       sessionStorage.setItem("rockPaperScissor", score);
 
       Axios.post(
-        "http://gamesserver.fkc9b4c8fze2dre0.centralindia.azurecontainer.io/api/updategamerockpaperscissor",
+        "https://gamesoncloudserver.azurewebsites.net/api/updategamerockpaperscissor",
         {
           username: sessionStorage.getItem("userName"),
           // game: "rockPaperScissor",

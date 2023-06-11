@@ -12,7 +12,7 @@ const Finish = ({ handleRestart, showModal, bestScore, moves }) => {
   useEffect(() => {
     if (sessionStorage.getItem("memorygame") == -1)
       Axios.post(
-        "http://gamesserver.fkc9b4c8fze2dre0.centralindia.azurecontainer.io/api/updatememorygame",
+        "https://gamesoncloudserver.azurewebsites.net/api/updatememorygame",
         {
           score: bestScore,
           username: sessionStorage.getItem("userName"),
@@ -20,7 +20,7 @@ const Finish = ({ handleRestart, showModal, bestScore, moves }) => {
       ).then(() => sessionStorage.setItem("memorygame", bestScore));
     else if (sessionStorage.getItem("memorygame") > bestScore)
       Axios.post(
-        "http://gamesserver.fkc9b4c8fze2dre0.centralindia.azurecontainer.io/api/updatememorygame",
+        "https://gamesoncloudserver.azurewebsites.net/api/updatememorygame",
         {
           score: bestScore,
           username: sessionStorage.getItem("userName"),

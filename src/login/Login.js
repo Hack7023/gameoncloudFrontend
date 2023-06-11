@@ -10,15 +10,11 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [details, setDetails] = useState();
 
-  const loginSelected = () => {
-    Axios.post(
-      "http://gamesserver.fkc9b4c8fze2dre0.centralindia.azurecontainer.io/api/login",
-
-      {
-        username: username,
-        password: password,
-      }
-    ).then((response) => {
+  const loginSelected = async () => {
+    await Axios.post("https://gamesoncloudserver.azurewebsites.net/api/login", {
+      username: username,
+      password: password,
+    }).then((response) => {
       try {
         setDetails(response.data[0].userName);
         navigate("/");

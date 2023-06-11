@@ -11,12 +11,12 @@ const Signupform = () => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
-  const submithandler = () => {
+  const submithandler = async () => {
     if (email === "" || name === "" || username === "" || password === "") {
       alert("fill all required field");
     } else {
-      Axios.post(
-        "http://gamesserver.fkc9b4c8fze2dre0.centralindia.azurecontainer.io/api/insertuser",
+      await Axios.post(
+        "https://gamesoncloudserver.azurewebsites.net/api/insertuser",
         {
           email: email,
           password: password,
